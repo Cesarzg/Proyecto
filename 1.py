@@ -1,0 +1,17 @@
+import numpy as np
+import matplotlib.pyplot as plt
+plt.figure(figsize=[10, 8])
+Inicial=(148,89,153,77,100)
+Primaria=(56,50,39,65,88)
+Secundaria=(189,155,165,170,150)
+X = np.arange(len(Primaria))
+plt.bar(X, Inicial, color = 'black', width = 0.25)
+plt.bar(X + 0.25, Primaria, color = 'g', width = 0.25)
+plt.bar(X + 0.5, Secundaria, color = 'b', width = 0.25)
+plt.legend(['inicial', 'primaria', 'secundaria'])
+plt.xticks([i + 0.25 for i in range(5)], ['Cajamarca', 'Callao', 'Cuzco', 'Huancavelica', 'Huanuco'])
+plt.title("Instituciones por regiones")
+plt.xlabel('Regiones')
+plt.ylabel('Instituciones')
+plt.savefig('proyecto2.png')
+plt.show()
